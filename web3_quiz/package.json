@@ -1,5 +1,6 @@
 {
   "name": "web3_quiz",
+  "homepage": "https://negi1232.github.io/FactCheckerTrainingPlatform/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,7 +42,9 @@
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "npm run build && gh-pages -d build",
+    "eject": "react-scripts eject",
+    "postbuild": "cp build/index.html build/404.html"
   },
   "eslintConfig": {
     "extends": [
@@ -51,14 +54,19 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }

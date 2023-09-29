@@ -47,17 +47,21 @@ class Contracts_MetaMask {
         return await walletClient.getChainId();
     }
     async add_token_wallet() {
-        await window.ethereum.request({
-            method: "wallet_watchAsset",
-            params: {
-                type: "ERC20",
-                options: {
-                    address: token_address,
-                    symbol: "Wake",
-                    decimals: 18,
+        try {
+            await window.ethereum.request({
+                method: "wallet_watchAsset",
+                params: {
+                    type: "ERC20",
+                    options: {
+                        address: token_address,
+                        symbol: "Wake",
+                        decimals: 18,
+                    },
                 },
-            },
-        });
+            });
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     async change_network() {
@@ -292,6 +296,7 @@ class Contracts_MetaMask {
                     }
                 }
                 console.log("create_quiz_cont");
+                document.location.href = process.env.PUBLIC_URL + "/answer_quiz/" + parseInt(res.logs[2].topics[2], 16);
             } else {
                 setShow(false);
                 console.log("Ethereum object does not exist");
@@ -300,7 +305,6 @@ class Contracts_MetaMask {
             setShow(false);
             console.log(err);
         }
-        document.location.href = "/answer_quiz/" + res.logs[2].topics[2];
     }
 
     async _create_quiz(account, title, explanation, thumbnail_url, content, answer_type, answer_data, correct, reply_startline, reply_deadline, reward, correct_limit) {
@@ -362,7 +366,7 @@ class Contracts_MetaMask {
             setShow(false);
             console.log(err);
         }
-        document.location.href = "/edit_list";
+        document.location.href = process.env.PUBLIC_URL + "/edit_list";
     }
 
     async _edit_quiz(account, id, owner, title, explanation, thumbnail_url, content, reply_startline, reply_deadline) {
@@ -419,7 +423,7 @@ class Contracts_MetaMask {
                     // }
                     let res = await publicClient.waitForTransactionReceipt({hash});
                     console.log(res);
-                    document.location.href = "/user_page/" + account;
+                    document.location.href = process.env.PUBLIC_URL + "/user_page/" + account;
                 }
                 console.log("create_answer_cont");
             } else {

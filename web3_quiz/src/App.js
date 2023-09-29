@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from "react";
+import {useEffect, useState, useRef} from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Nav_menu from "./pages/navbar/navbar";
 import Login from "./contract/login";
 import User_page from "./pages/user_page/user_page";
@@ -12,7 +12,7 @@ import Admin_page from "./pages/admin_page/admin";
 import Edit_list from "./pages/edit_list/edit_list_top";
 import Edit_quiz from "./pages/edit_quiz/edit_quiz";
 import Investment_page from "./pages/investment_page/investment_page";
-import { Contracts_MetaMask } from "./contract/contracts";
+import {Contracts_MetaMask} from "./contract/contracts";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <div className="App">
             <body>
                 <div>
-                    <BrowserRouter>
+                    <BrowserRouter basename={process.env.PUBLIC_URL}>
                         <Routes>
                             <Route path={"/login"} element={<Login url={"login"} cont={cont} />} />
                         </Routes>
