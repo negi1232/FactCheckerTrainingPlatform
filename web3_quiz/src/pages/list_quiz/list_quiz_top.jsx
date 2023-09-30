@@ -1,11 +1,6 @@
 import {Contracts_MetaMask} from "../../contract/contracts";
-import Form from "react-bootstrap/Form";
 import {useState, useEffect, useRef} from "react";
-import MDEditor, {selectWord} from "@uiw/react-md-editor";
-import {resolvePath, useParams} from "react-router-dom";
-import Simple_quiz from "./components/quiz_simple";
 import Quiz_list from "./components/quiz_list";
-import {Link} from "react-router-dom";
 
 function List_quiz_top(props) {
     //クイズのコントラクト
@@ -21,7 +16,7 @@ function List_quiz_top(props) {
     //１回の更新で追加で表示する個数
     const [add_num, Set_add_num] = useState(7);
     // コンテナのrefを作成
-    const containerRef = useRef(null);
+    //const containerRef = useRef(null);
 
     const callback = (entries, observer) => {
         entries.forEach((entry) => {

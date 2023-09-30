@@ -1,18 +1,11 @@
 import {useEffect, useState} from "react";
-
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
 import "./navbar.css";
-import {AiFillPropertySafety, AiOutlineUser} from "react-icons/ai";
+import {AiOutlineUser} from "react-icons/ai";
 import {MdOutlineQuiz} from "react-icons/md";
 import {RiFileSettingsLine} from "react-icons/ri";
 import {AiOutlineUnorderedList} from "react-icons/ai";
-import {BrowserRouter as Router, Route, NavLink, Switch} from "react-router-dom";
-import {AiFillHome, AiFillSetting, AiFillStar} from "react-icons/ai";
-import {Contracts_MetaMask} from "../../contract/contracts";
 import Modal_change_network from "./Modal_change_network";
 
 function create_edit_button() {

@@ -1,10 +1,8 @@
-import {useEffect, useState} from "react";
-
 const Modal_change_network = (props) => {
     if (props.chain_id) {
         return (
             <>
-                {props.chain_id != 78950 ? ( // showFlagがtrueだったらModalを表示する
+                {props.chain_id !== 78950 ? ( // showFlagがtrueだったらModalを表示する
                     <div id="overlay" class="stars" style={{}}>
                         <div
                             id="modalContent"

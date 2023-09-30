@@ -1,12 +1,9 @@
 import {useState, useEffect} from "react";
 
-import {AiOutlineArrowRight} from "react-icons/ai";
-import Change_user from "./change_user";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-function User_card(props) {
+function UserCard(props) {
     const [name, SetName] = useState(props.user_name);
     const [image_url, SetImage_url] = useState(props.icons);
     const [nameError, SetNameError] = useState("");
@@ -16,7 +13,7 @@ function User_card(props) {
         console.log("update_handler");
         console.log(name);
         console.log(image_url);
-        if (nameError == false) {
+        if (nameError === false) {
             props.cont.update_user_data(name, image_url);
         } else {
             Setstate(false);
@@ -131,4 +128,4 @@ function User_card(props) {
         );
     }
 }
-export default User_card;
+export default UserCard;

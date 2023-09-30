@@ -1,15 +1,11 @@
-import Form from "react-bootstrap/Form";
-import {useState, useEffect, useRef} from "react";
-import MDEditor, {selectWord} from "@uiw/react-md-editor";
-import {resolvePath, useParams} from "react-router-dom";
+import {useEffect, useRef} from "react";
 import Simple_history from "./history_simple";
-import {Link} from "react-router-dom";
-function History_list(props) {
+function HistoryList(props) {
     //1回の更新で追加で表示する個数
     //画面を満たす個数を計算して、add_numに代入
     const add_num = useRef(Math.floor(window.innerHeight / 100) + 2);
 
-    const history_list = props.history_list;
+    //const history_list = props.history_list;
     const Set_history_list = props.Set_history_list;
 
     //クイズのリストを取得
@@ -78,4 +74,4 @@ function History_list(props) {
         };
     }, []); // []を指定して初期状態のみで実行されるようにする
 }
-export default History_list;
+export default HistoryList;

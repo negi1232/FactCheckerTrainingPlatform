@@ -1,12 +1,10 @@
 import {Contracts_MetaMask} from "../../contract/contracts";
 import {useState, useEffect, useRef} from "react";
 import {useParams} from "react-router-dom";
-import Login from "../../contract/login";
 //cssをimport
 import "./user_page.css";
-import History_list from "./component/history_list";
-import User_card from "./component/user_card";
-import {icons} from "react-icons/lib";
+import HistoryList from "./component/history_list";
+import UserCard from "./component/user_card";
 
 function User_page() {
     const {address} = useParams();
@@ -27,33 +25,34 @@ function User_page() {
     let cont = new Contracts_MetaMask();
     const [history_list, Set_history_list] = useState([]);
 
-    const get_variable = async () => {
-        Set_token(await cont.get_token_balance(address));
-        let [user_name, image, result, state] = await cont.get_user_data(address);
-        console.log(user_name, image, state);
-        Setuser_name(user_name);
-        SetIcons(image);
-        SetResult(result / 10 ** 18);
-        Set_state(state);
-
-        cont.get_user_history_len(address).then((data) => {
-            // Promise オブジェクトが解決された後の処理を記述
-            console.log(Number(data));
-            Set_history_sum(Number(data));
-            now_numRef.current = Number(data);
-        });
-    };
-
     //初回のみ実行
     useEffect(() => {
+        const get_variable = async () => {
+            Set_token(await cont.get_token_balance(address));
+            let [user_name, image, result, state] = await cont.get_user_data(address);
+            console.log(user_name, image, state);
+            Setuser_name(user_name);
+            SetIcons(image);
+            SetResult(result / 10 ** 18);
+            Set_state(state);
+
+            cont.get_user_history_len(address).then((data) => {
+                // Promise オブジェクトが解決された後の処理を記述
+                console.log(Number(data));
+                Set_history_sum(Number(data));
+                now_numRef.current = Number(data);
+            });
+        };
         get_variable();
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     if (history_sum != null) {
         return (
             <div className="mypage">
-                <User_card address={address} icons={icons} user_name={user_name} token={token} result={result} state={state} cont={cont} />
-                <History_list cont={cont} history_sum={history_sum} Set_history_sum={Set_history_sum} history_list={history_list} Set_history_list={Set_history_list} targetRef={targetRef} now_numRef={now_numRef} address={address} />
+                <UserCard address={address} icons={icons} user_name={user_name} token={token} result={result} state={state} cont={cont} />
+                <HistoryList cont={cont} history_sum={history_sum} Set_history_sum={Set_history_sum} history_list={history_list} Set_history_list={Set_history_list} targetRef={targetRef} now_numRef={now_numRef} address={address} />
 
                 <div className="token-history">
                     <div className="title">Token History</div>

@@ -1,10 +1,7 @@
-import Form from "react-bootstrap/Form";
-import {useState, useEffect, useRef} from "react";
-import MDEditor, {selectWord} from "@uiw/react-md-editor";
-import {resolvePath, useLocation} from "react-router-dom";
+import {useEffect, useRef} from "react";
+import {useLocation} from "react-router-dom";
 import Simple_quiz from "./quiz_simple";
 
-import {Link} from "react-router-dom";
 function Quiz_list(props) {
     const location = useLocation();
     //画面を満たす個数を計算して、add_numに代入
@@ -13,7 +10,7 @@ function Quiz_list(props) {
     //表示するクイズのリスト
     // const [quiz_list,Set_quiz_list] =useState([]);
 
-    const quiz_list = props.quiz_list;
+    //const quiz_list = props.quiz_list;
     const Set_quiz_list = props.Set_quiz_list;
 
     //クイズのリストを取得

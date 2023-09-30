@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import "./change_user.css";
 
 function Change_user({show, setShow}) {
