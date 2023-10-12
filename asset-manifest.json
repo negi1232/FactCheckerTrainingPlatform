@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FactCheckerTrainingPlatform/static/css/main.9a4732c4.css",
-    "main.js": "/FactCheckerTrainingPlatform/static/js/main.a40c2a4a.js",
+    "main.css": "/FactCheckerTrainingPlatform/static/css/main.7c629bc9.css",
+    "main.js": "/FactCheckerTrainingPlatform/static/js/main.957a84d2.js",
     "static/js/781.2b7ca1fc.chunk.js": "/FactCheckerTrainingPlatform/static/js/781.2b7ca1fc.chunk.js",
     "static/js/514.a4d40e05.chunk.js": "/FactCheckerTrainingPlatform/static/js/514.a4d40e05.chunk.js",
     "static/js/27.e269e409.chunk.js": "/FactCheckerTrainingPlatform/static/js/27.e269e409.chunk.js",
@@ -11,7 +11,7 @@
     "index.html": "/FactCheckerTrainingPlatform/index.html"
   },
   "entrypoints": [
-    "static/css/main.9a4732c4.css",
-    "static/js/main.a40c2a4a.js"
+    "static/css/main.7c629bc9.css",
+    "static/js/main.957a84d2.js"
   ]
 }
