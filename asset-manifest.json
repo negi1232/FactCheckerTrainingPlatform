@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FactCheckerTrainingPlatform/static/css/main.26c1d0f6.css",
-    "main.js": "/FactCheckerTrainingPlatform/static/js/main.864840e1.js",
-    "static/js/406.38a3d20b.chunk.js": "/FactCheckerTrainingPlatform/static/js/406.38a3d20b.chunk.js",
-    "static/js/27.411951d5.chunk.js": "/FactCheckerTrainingPlatform/static/js/27.411951d5.chunk.js",
+    "main.css": "/FactCheckerTrainingPlatform/static/css/main.53246df1.css",
+    "main.js": "/FactCheckerTrainingPlatform/static/js/main.dd75965f.js",
+    "static/js/406.79fa53ae.chunk.js": "/FactCheckerTrainingPlatform/static/js/406.79fa53ae.chunk.js",
+    "static/js/27.e269e409.chunk.js": "/FactCheckerTrainingPlatform/static/js/27.e269e409.chunk.js",
     "static/media/metamask-icon.svg": "/FactCheckerTrainingPlatform/static/media/metamask-icon.b3649ecfe8c45f27ceb9f99d70f3d24e.svg",
     "static/media/logo.svg": "/FactCheckerTrainingPlatform/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/blocto-icon.svg": "/FactCheckerTrainingPlatform/static/media/blocto-icon.ff8c029ba3c3588f8924488fe25239d5.svg",
     "index.html": "/FactCheckerTrainingPlatform/index.html"
   },
   "entrypoints": [
-    "static/css/main.26c1d0f6.css",
-    "static/js/main.864840e1.js"
+    "static/css/main.53246df1.css",
+    "static/js/main.dd75965f.js"
   ]
 }
