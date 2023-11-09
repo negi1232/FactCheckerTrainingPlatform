@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FactCheckerTrainingPlatform/static/css/main.53246df1.css",
-    "main.js": "/FactCheckerTrainingPlatform/static/js/main.dd75965f.js",
+    "main.css": "/FactCheckerTrainingPlatform/static/css/main.8e11fec8.css",
+    "main.js": "/FactCheckerTrainingPlatform/static/js/main.e09b6aae.js",
     "static/js/406.79fa53ae.chunk.js": "/FactCheckerTrainingPlatform/static/js/406.79fa53ae.chunk.js",
     "static/js/27.e269e409.chunk.js": "/FactCheckerTrainingPlatform/static/js/27.e269e409.chunk.js",
     "static/media/metamask-icon.svg": "/FactCheckerTrainingPlatform/static/media/metamask-icon.b3649ecfe8c45f27ceb9f99d70f3d24e.svg",
@@ -10,7 +10,7 @@
     "index.html": "/FactCheckerTrainingPlatform/index.html"
   },
   "entrypoints": [
-    "static/css/main.53246df1.css",
-    "static/js/main.dd75965f.js"
+    "static/css/main.8e11fec8.css",
+    "static/js/main.e09b6aae.js"
   ]
 }
